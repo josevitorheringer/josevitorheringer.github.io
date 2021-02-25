@@ -7,23 +7,37 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+    <style>
+
+        input[type=text]{
+            width: 400px;
+        }
+        
+        input {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <form action="/clientes" method="POST">
-        <p>Cadastro de clientes</p>
+        <fieldset>
+            <legend>Cadastro de Clientes</legend>
+            <label for="fname">Nome</label><br>
+            <input type="text" name="fnome" placeholder="Digite seu nome" maxlength="30" required><br>
+            <label for="fendereco">Endereço</label><br>
+            <input type="text" name="fendereco" placeholder="Digite seu endereço" maxlength="50" size="50" required><br>
+            <label for="femail">Email</label><br>
+            <input type="email" name="femail" placeholder="Digite seu email" maxlength="30" required><br>
+            <input type="checkbox" id="fnewsletter" name="fnewsletter">
+            <label for="fnewsletter"> Desejo receber newsletter</label><br>
 
-        <label for="fname">Nome</label><br>
-        <input type="text" name="fnome" placeholder="Digite seu nome" maxlength="30" required><br><br>
-        <label for="fendereco">Endereço</label><br>
-        <input type="text" name="fendereco" placeholder="Digite seu endereço" maxlength="50" size="50" required><br><br>
-        <label for="femail">Email</label><br>
-        <input type="email" name="femail" placeholder="Digite seu email" maxlength="30" required><br><br>
-        <input type="checkbox" id="fnewsletter" name="fnewsletter">
-        <label for="fnewsletter"> Desejo receber newsletter</label><br> <br>
-
-        <input type="submit" value="Cadastrar">
-        <input type="reset" value="Cancelar">
-
+            <button>Cadastrar</button>
+            <input type="reset" value="Cancelar">
+        </fieldset>
     </form>
 </body>
 </html>
