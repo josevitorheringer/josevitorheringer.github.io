@@ -1,0 +1,236 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Quicksand', sans-serif;
+    font-kerning: none;
+}
+
+header{
+    display: flex;
+    border-bottom: solid rgb(211, 211, 211) 1px;
+    border-top: solid rgb(70, 70, 70) 2px;
+    align-items: center;
+    letter-spacing: 2px;
+    font-size: 11px;
+}
+
+h2{
+    font-size: 40px;
+    font-family: 'Poppins';
+    letter-spacing: 4px;
+}
+
+h3{
+    letter-spacing: 2px;
+    font-weight: normal;
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+h3 span{
+    border-bottom: 1px dotted;
+}
+
+header a {
+    padding: 25px 25px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+header a:hover{
+    opacity: 1;
+}
+
+header p:nth-child(n+2){
+    color: rgb(211, 211, 211);
+    padding: 0px;
+}
+  
+header p{
+    padding: 20px 20px;
+}
+
+header p:first-child{
+    padding-left: 50px;
+    padding-right: 50px;
+    border-right: solid rgb(211, 211, 211) 1px;
+    font-weight: 700;
+}
+
+.background{
+    background-color: #f1f1f1;
+}
+
+.row {  
+display: flex;
+width: 80%;
+margin: 0 auto;
+padding-top: 50px;
+}
+
+.side {
+flex: 20%;
+background-color: #f1f1f1;
+padding: 20px;
+margin-right: 30px;
+}
+
+.caixas{
+    border-top: solid rgb(211, 211, 211) 2px;
+    border-bottom: solid rgb(211, 211, 211) 2px;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.image-cropper {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+  }
+
+.box{
+    background-color: #fff;
+    border: solid rgb(211, 211, 211) 1px;
+    margin-top: 30px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 20px;
+    align-items: center;
+}
+
+
+.outros-section img{
+    width: 80px;
+    padding: 30px;
+}
+
+.outros-section .texto{
+    padding: 10px;
+}
+
+.outros-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid rgb(211, 211, 211) 1px;
+}
+
+.outros-section p:first-child, .box p:first-child{
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.outros-section p:last-child, .box p:last-child{
+    font-size: 10px;
+    padding-top: 5px;
+}
+
+.outros-section p, .box p{
+    letter-spacing: 2px;
+}
+
+.main {
+    flex: 80%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.box2{
+    background-color: white;
+    border: solid rgb(211, 211, 211) 1px;;
+    display: flex;
+    flex-direction: column;
+}
+
+.box2 h2{
+    font-size: 30px;
+}
+
+.box2 .cabecalho{
+    border-bottom: solid rgb(211, 211, 211) 1px;
+
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho .titulo{
+   flex: 60%;
+    padding: 50px;
+   border-right: solid rgb(211, 211, 211) 1px;
+}
+
+.post-info{
+    padding: 50px;
+}
+
+.box2 .cabecalho .user{
+    display: flex;
+}
+
+.box2 .conteudo{
+    padding: 40px;
+}
+
+.box2 .conteudo img{
+    width: 100%;
+
+}
+
+@media screen and (max-width: 700px) {
+    .row, header {   
+      flex-direction: column;
+    }
+    .side{
+        margin-right: 0px;
+        padding: 0px;
+        margin-bottom: 30px;
+    }
+    header p{
+        text-align: center;
+        border-bottom: solid rgb(211, 211, 211) 3px;
+    }
+
+    header a{
+        border-bottom: solid rgb(211, 211, 211) 1px;
+    }
+
+    header p:nth-child(n+2){
+        display: none;
+    }
+
+    header p:first-child{
+        margin-bottom: 0px;
+        border-right: none;
+    }
+
+    .info div:first-child{
+        flex: 20%;
+    }
+    .box img{
+        width: 100%;
+    }
+    .box2 .cabecalho{
+        flex-direction: column;
+    }
+  }
