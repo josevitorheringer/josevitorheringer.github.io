@@ -7,11 +7,38 @@
 
 header{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: solid rgb(211, 211, 211) 1px;
     border-top: solid rgb(70, 70, 70) 2px;
+}
+
+.pesquisa{
+    font-size: 20px;
+}
+
+.pesquisa i{
+  padding: 25px 25px;
+  border-left: solid rgb(211, 211, 211) 1px;
+  color: black;
+  opacity: 0.3;
+  transition: 0.3s; 
+}
+
+.pesquisa i:hover{
+    opacity: 1;
+  }
+
+.menu{
+    display: flex;
+
     align-items: center;
     letter-spacing: 2px;
     font-size: 11px;
+}
+
+.menu p{
+    font-size: 13px;
 }
 
 h2{
@@ -31,7 +58,7 @@ h3 span{
     border-bottom: 1px dotted;
 }
 
-header a {
+.menu a {
     padding: 25px 25px;
     text-decoration: none;
     text-align: center;
@@ -40,20 +67,20 @@ header a {
     transition: 0.3s;
 }
 
-header a:hover{
+.menu a:hover{
     opacity: 1;
 }
 
-header p:nth-child(n+2){
+.menu p:nth-child(n+2){
     color: rgb(211, 211, 211);
     padding: 0px;
 }
   
-header p{
+.menu p{
     padding: 20px 20px;
 }
 
-header p:first-child{
+.menu p:first-child{
     padding-left: 50px;
     padding-right: 50px;
     border-right: solid rgb(211, 211, 211) 1px;
@@ -62,6 +89,7 @@ header p:first-child{
 
 .background{
     background-color: #f1f1f1;
+    padding-bottom: 130px;
 }
 
 .row {  
@@ -158,6 +186,7 @@ margin-right: 30px;
     border: solid rgb(211, 211, 211) 1px;;
     display: flex;
     flex-direction: column;
+    margin-bottom: 70px;
 }
 
 .box2 h2{
@@ -175,17 +204,79 @@ margin-right: 30px;
 }
 
 .cabecalho .titulo{
-   flex: 60%;
-    padding: 50px;
-   border-right: solid rgb(211, 211, 211) 1px;
+    flex: 60%;
+    padding: 80px 50px 80px 50px;
+    border-right: solid rgb(211, 211, 211) 1px;
+}
+
+.cabecalho p{
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.conteudo p{
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: justify;
+    color: rgb(85, 85, 85);
+}
+
+.box2 .rodape{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px 80px 100px;
+}
+
+.box2 .rodape a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.box2 .rodape p{
+    margin: 0px 20px 0px 10px ;
+}
+
+.box2 .rodape p:first-child{
+    margin: 0px 20px 0px 00px ;
+}
+
+.box2-infos{
+    display: flex;
+    align-items: center;
+    color: rgb(128, 128, 128);
+}
+
+.box2-infos p:first-child{
+    border-bottom: 1px dotted;
+    padding-bottom: 0px;
 }
 
 .post-info{
-    padding: 50px;
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 50px;
 }
+
+.data-post{
+    font-weight: bold;
+ }
 
 .box2 .cabecalho .user{
     display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.box2 .cabecalho .user p{
+    margin-right: 10px;
+    border-bottom: 1px dotted;
 }
 
 .box2 .conteudo{
@@ -197,29 +288,64 @@ margin-right: 30px;
 
 }
 
+.paginas{
+    width: 17%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paginas a, i{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: 700;
+    opacity: 0.3;
+    transition: 0.3s;
+    text-decoration: none;
+    color: #000;
+}
+
+.paginas a:hover{
+    opacity: 1;
+}
+
+.paginas .pag-anterior{
+    display: flex;
+    align-items: baseline;
+}
+
+.paginas .prox-pagina{
+    display: flex;
+    align-items: baseline;
+}
+
 @media screen and (max-width: 700px) {
-    .row, header {   
+    .row, .menu {   
       flex-direction: column;
+      width: 100%;
     }
     .side{
         margin-right: 0px;
         padding: 0px;
         margin-bottom: 30px;
+        width: 100%;
     }
-    header p{
+    .menu p{
         text-align: center;
         border-bottom: solid rgb(211, 211, 211) 3px;
     }
 
-    header a{
+    .menu a{
         border-bottom: solid rgb(211, 211, 211) 1px;
     }
 
-    header p:nth-child(n+2){
+    .menu p:nth-child(n+2){
         display: none;
     }
 
-    header p:first-child{
+    .menu p:first-child{
         margin-bottom: 0px;
         border-right: none;
     }
@@ -233,4 +359,34 @@ margin-right: 30px;
     .box2 .cabecalho{
         flex-direction: column;
     }
+
+    .row .side .logo{
+        padding: 30px;
+    }
+
+    .main{
+        width: 100%;
+        padding: 0px;
+    }
+    .main .rodape{
+        padding: 10px 30px 80px 10px;
+    }
+
+    .box2 .rodape p{
+        margin: 0px 5px 0px 5px ;
+    }
+    .box2 .rodape p:first-child{
+        margin: 0px 10px 0px 00px ;
+    }
+
+    .post-info{
+        margin-bottom: 30px;
+    }
+    .cabecalho .titulo{
+        padding-bottom: 20px;
+    }
+    .paginas{
+        width: 70%;
+    }
+    
   }
