@@ -27,18 +27,21 @@ header span{
     color: #0098e4;
 }
 
+a{
+    margin-top: 10px;
+}
+
 li a:hover{
     color: #0098e4;
 }
 
-
+ul{
+    display: flex;
+    flex-direction: row;
+}
 li {
     padding: 25px;
     display: inline;
-}
-
-.grow{
-    flex-grow: 1;
 }
 
 .controle {
@@ -85,7 +88,15 @@ li {
     display: flex;
     width: 95%;
     margin: 0 auto;
+    flex-direction: row;
 }
+
+@media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+
 
 .box{
     background-color: #0468a1;
@@ -129,7 +140,68 @@ li {
     width: 95%;
     margin: 0 auto;
     display: flex;
-    align-items: stretch;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.ultima-secao .informacao{
+    width: 68%;
+    display: flex; 
+    flex-direction: column;   
+}
+
+.ultima-secao .informacao .imagem {
+    display: flex;
+}
+
+.foto1{
+    width: 1500px;
+}
+
+.conquiste{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.ultima-secao .informacao .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ultima-secao .informacao .texto p{
+    margin-left: 20px;
+    width: 70%;
+}
+
+.ultima-secao .informacao .texto a{
+    color: #0468a1;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.ultima-secao .depoimento{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}
+
+.ultima-secao .depoimento blockquote{
+    background-color: rgb(204, 236, 255);
+    font-style: italic;
+    padding: 30px;
+}
+
+.ultima-secao .depoimento p:last-child{
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.ultima-secao .depoimento p:first-child{
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .principal nav{
