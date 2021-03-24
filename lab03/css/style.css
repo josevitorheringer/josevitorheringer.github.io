@@ -175,6 +175,36 @@ margin-right: 30px;
     letter-spacing: 2px;
 }
 
+.sobre{
+    border-bottom: solid rgb(211, 211, 211) 1px;
+    border-top: solid rgb(211, 211, 211) 1px;
+    padding-bottom: 40px;
+}
+
+.sobre p{
+    text-align: justify;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.sobre p:first-child{
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.sobre a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 12px;
+    margin-left: 40px;
+}
+
+.social-media{
+    margin-top: 30px;
+}
+
 .main {
     flex: 80%;
     background-color: #f1f1f1;
