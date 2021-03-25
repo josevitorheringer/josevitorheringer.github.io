@@ -221,7 +221,7 @@ footer a {
     }
 }
 /*tablet*/
-@media (min-width: 768px) and (max-width:991px) { 
+@media (min-width: 768px) and (max-width:1025px) { 
     body {
         background-color:chocolate;
     }
@@ -290,7 +290,7 @@ footer a {
     }
 }
 /*desktop*/
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
 
     .container {
         width: 1000px;
