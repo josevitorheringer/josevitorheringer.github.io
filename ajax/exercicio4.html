@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Exercício 3</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <h2>Consultar CEP</h2>
+    <input type="text" id="cep" placeholder="Insira seu CEP">
+    <input type="button" value="Pesquisar" id="button">
+    <div id="result">
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript" >
+        $(document).ready(function() {
+            $("#button").click(function() {  
+                $( "#result" ).empty(); 
+                var cep = $("#cep").val();
+                var validacep = /^[0-9]{5}-?[0-9]{3}$/;
+                    $.getJSON("http://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+                            $("#result").append("<p> Rua: " + dados.logradouro + "</p>")
+                            .append("<p> Bairro: " + dados.bairro + "</p>")
+                            .append("<p> Localidade: " + dados.localidade + "</p>")
+                            .append("<p> UF: " + dados.uf + "</p>")
+                            .append("<p> IBGE: " + dados.ibge + "</p>");
+                    });
+            });
+        });
+    </script>
+	
+</body>
+</html>

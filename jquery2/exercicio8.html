@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Exercício 8</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+        
+    <h1>Distância entre datas em semanas</h1> 
+
+    <div>
+
+        <p>Data 1</p>
+        <input type="date" id="data1" placeholder="nascimento"> <br><br>
+        
+        <p>Data 2</p>
+        <input type="date" id="data2" placeholder="nascimento"> <br><br>
+        <button id="button" class="btn">Executar</button> <br>
+    </div>
+
+    <div id="result"></div>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $("#button").click(function(){
+                let data1 = $("#data1").val(); 
+                let data2 = $("#data2").val(); 
+
+                let dia_data1 = data1.substr(8,2);
+                let mes_data1 = data1.substr(5,2);
+                let ano_data1 = data1.substr(0,4);
+
+                let dia_data2 = data2.substr(8,2);
+                let mes_data2 = data2.substr(5,2);
+                let ano_data2 = data2.substr(0,4);
+
+                let dt_form_date2 = new Date(ano_data2,mes_data2 - 1,dia_data2);
+                let dt_form_date1 = new Date(ano_data1,mes_data1 - 1,dia_data1);
+                const diff = Math.abs(dt_form_date1.getTime() - dt_form_date2.getTime());
+                const days = Math.ceil(diff / (1000 * 60 * 60 * 24 * 7));
+                $("#result").text("A distância em semanas da data "+ dia_data1 + "/" + mes_data1 + "/" + ano_data1 + " até a data " + dia_data2 + "/" + mes_data2 + "/" + ano_data2 +  " é " + days);
+            
+            })
+        });
+    </script>
+	
+</body>
+</html>
