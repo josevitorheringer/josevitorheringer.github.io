@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Exercício 5</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Procurar e substituir</h1> 
+            
+    <div>
+        <input type="text" id="frase" placeholder="Frase">
+        <input type="text" id="encontrar" placeholder="Encontrar a palavra"> 
+        <input type="text" id="substituir" placeholder="Substituir por">
+        <button id="button" class="btn">Executar</button>
+    </div>
+
+    <div id="result"></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $("#button").click(function(){
+                let frase = $("#frase").val();
+                let encontrar = $("#encontrar").val();
+                let substituir = $("#substituir").val();
+
+                frase = frase.toLocaleLowerCase();
+                encontrar = encontrar.toLocaleLowerCase();
+                substituir = substituir.toLocaleLowerCase();
+                let texto = frase.split(' ');
+                for(i=0;i<texto.length;i++)
+                {
+                    if(texto[i]==encontrar)
+                    {
+                        texto[i] = substituir;
+                    }
+                }
+                let frase_substituida = texto.join(' ');
+                $("#result").text(frase_substituida);
+            })
+
+        });
+    </script>
+	
+</body>
+</html>

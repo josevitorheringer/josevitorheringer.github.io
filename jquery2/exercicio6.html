@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Exercício 6</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+        
+    <h1>Dias de vida</h1> 
+
+    <div>
+        <h2>Escreve sua data de nascimento e veja quntos dias de vida você já viveu:</h2>
+        <p>Data de nascimento</p>
+        <input type="date" id="data" placeholder="nascimento"> <br><br>
+        <button id="button" class="btn">Executar</button> <br>
+    </div>
+
+    <div id="result"></div>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $("#button").click(function(){
+                let data = $("#data").val();
+                    let ano = data.substr(0,4);
+                    let mes = data.substr(5,2);
+                    let dia = data.substr(8,2);
+                    let hoje = new Date;
+                    let data1 = new Date(ano,mes - 1,dia);
+                    const subtracao = Math.abs(data1.getTime() - hoje.getTime());
+                    const idade_dias = Math.ceil(subtracao / (1000 * 60 * 60 * 24));
+                    $("#result").text("Sua idade em dias é  " + idade_dias );        
+            })
+
+        });
+    </script>
+	
+</body>
+</html>
