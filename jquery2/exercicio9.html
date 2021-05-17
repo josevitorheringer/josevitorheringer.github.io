@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Exercício 9</title>
+	<meta charset="utf-8">
+
+    <style>
+        input{
+            border: solid 7px black;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+        <h2>Descubra a força da sua senha</h2>
+        <div>
+            <input type="text" id="texto" placeholder="Senha">
+        </div>
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+    
+    $("#texto").keyup(function(){
+        const minusculo = /[a-z]/;
+        const maiusculo = /[A-Z]/;
+        const numeros = /[1-9]/;
+        const caracteres_especiais = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/;
+
+
+        
+        if(minusculo.test($("#texto").val()) && maiusculo.test($("#texto").val()) && numeros.test($("#texto").val()) && caracteres_especiais.test($("#texto").val()))
+        {
+            $("#texto").css("border-color","green");
+        }else if(minusculo.test($("#texto").val()) && maiusculo.test($("#texto").val()) && numeros.test($("#texto").val()))
+        {
+            $("#texto").css("border-color","orange");
+        }else {
+            $("#texto").css("border-color","red");
+        }
+    })
+});
+    </script>
+	
+</body>
+</html>
