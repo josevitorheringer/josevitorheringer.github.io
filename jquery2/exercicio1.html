@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Inverter</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+        <h1>Inversão de caracteres na frase</h1> 
+            <div>
+                
+                <input type="text" id="texto" placeholder="Digite uma frase:"><br><br>
+                <button id="button">Inverter</button>
+                <p id="result"></p><br>
+                
+            </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            $("#button").click(function(){
+                let frase = $("#texto").val();
+                    frase = frase.split("").reverse().join("");
+                    $("#result").text(frase);
+                
+            })
+        });
+
+    </script>
+	
+</body>
+</html>
